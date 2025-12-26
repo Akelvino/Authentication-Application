@@ -7,5 +7,13 @@
 </head>
 <body>
     <h1>This is the home page</h1>
+
+    {% if user.is_authenticated %}
+        <form action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% endif %}
+
 </body>
 </html>
