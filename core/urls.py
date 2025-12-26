@@ -5,9 +5,9 @@ from .forms import LoginForm
 
 
 urlpatterns = [
-    path('',views.index, name='home'),
+    path('home/',views.index, name='home'),
     path('register/', views.register, name='register'),
-    path('login/', aut_view.LoginView.as_view(
+    path('', aut_view.LoginView.as_view(
         template_name = 'core/login.html', 
         authentication_form = LoginForm,
         redirect_authenticated_user = True,
