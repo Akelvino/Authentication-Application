@@ -28,6 +28,11 @@
                 <label>Confirm Password</label><br>
                 {{ form.password2 }}
             </div>
+
+            {% if form.errors %}
+                {{ form.errors }}
+            {% endif %}
+
             <button type="submit">Register</button>
         </form>
     </div>
