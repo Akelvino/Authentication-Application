@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="mx-auto flex w-[30rem] min-h-screen w-full items-center justify-center bg-gray-900 text-white">
-    <div
-        class="space-y-10 relative mx-auto w-full max-w-md bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+    <div class="space-y-10 relative mx-auto w-full max-w-md bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+         <h1 class="text-center text-3xl font-semibold">Login</h1>
         <form action="" method="POST">
             {% csrf_token %}
             <div
@@ -29,7 +29,7 @@
         </form>
         <p class="text-center text-lg text-white">Don&#x27;t have an account yet?
             <a href="{% url 'register' %}"
-                class="font-semibold text-blue-600 hover:underline focus:text-gray-800 focus:outline-none">Sign
+                class="font-semibold text-blue-600 hover:underline focus:text-blue-800 focus:outline-none">Sign
                 up
             </a>.
         </p>
