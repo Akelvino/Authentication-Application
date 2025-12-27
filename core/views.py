@@ -8,7 +8,6 @@ from .forms import SignupForm
 def index(request):
     return render(request, 'core/index.html')
 
-@login_required
 def register(request):
     form = SignupForm()
     if request.method == 'POST':
