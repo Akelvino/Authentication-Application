@@ -8,3 +8,7 @@ sqlparse==0.5.5
 svgwrite==1.4.3
 Tree==0.2.4
 tzdata==2025.3
+
+
+gunicorn==22.0.0
+whitenoise==6.7.0
