@@ -12,7 +12,7 @@
     <form action="{% url 'logout' %}" method="POST">
         {% csrf_token %}
         <div class="flex justify-center items-center gap-4">
-            <button type="submit" class="shadow-[inset_6px_6px_12px_#c5c5c5,inset_-6px_-6px_12px_#ffffff] py-[0.7em] px-[1.7em] text-[#090909] text-[18px] border-1 border-[#e8e8e8] border-solid cursor-pointer">Logout</button>
+            <button type="submit" class="shadow-[inset_6px_6px_12px_#c5c5c5,inset_-6px_-6px_12px_#ffffff] py-[0.7em] px-[1.7em] text-[#090909] text-[18px]  border-[#e8e8e8] border-solid cursor-pointer">Logout</button>
         </div>
     </form>
     {% endif %}
