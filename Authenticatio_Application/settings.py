@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i&%5%0nk+&0hzg!$!m*g7f+*=@78lnaa=3sd6rj!)%&93=wop^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['your-railway-project.up.railway.app']
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL ='home'
 LOGOUT_REDIRECT_URL = 'login'
@@ -123,3 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://your-railway-project.up.railway.app'
+]
