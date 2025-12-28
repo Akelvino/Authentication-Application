@@ -1,6 +1,5 @@
 from pathlib import Path
-import os
-import dj_database_url  # Make sure this is in requirements.txt
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -61,13 +60,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Authenticatio_Application.wsgi.application'
 
 # Database - use Railway's DATABASE_URL if available
-DATABASES = {
-    'default': dj_database_url.config(
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
-        conn_max_age=600,
-        ssl_require=True
-    )
-}
+import dj_database_url
+import os
+
+DATABASES = {}
+
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+if DATABASE_URL:
+    # Production: use PostgreSQL
+    DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=600, ssl_require=True)
+else:
+    # Local development: use SQLite
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
+    }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
