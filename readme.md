@@ -1,6 +1,6 @@
 # Authentication Application
 
-![App Screenshot](./images/authlog%20in%20pic.png.png)
+![App Screenshot](./images/authlog in pic.png.png)
 
 ---
 
