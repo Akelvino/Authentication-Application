@@ -6,9 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 SECRET_KEY = 'django-insecure-i&%5%0nk+&0hzg!$!m*g7f+*=@78lnaa=3sd6rj!)%&93=wop^'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kelvinho.pythonanywhere.com']
 
 # Authentication redirects
 LOGIN_URL = 'login'
